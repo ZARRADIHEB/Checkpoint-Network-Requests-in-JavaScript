@@ -46,7 +46,7 @@ const getWeather = async () => {
     }
     //
     else if (info.main.temp < 25 && info.main.temp >= 16) {
-      icon.innerHTML = '<img src="https://github.com/ZARRADIHEB/Checkpoint-Network-Requests-in-JavaScript/icons/sunny.png" alt="sunny icon">';
+      icon.innerHTML = '<img src="./icons/sunny.png" alt="sunny icon">';
       temperature.style.cssText = `color: orange ; opacity: 1`;
       document.body.classList = "";
       document.body.classList.add("sunny-weather");
