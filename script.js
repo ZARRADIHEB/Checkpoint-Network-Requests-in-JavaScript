@@ -12,10 +12,6 @@ input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     getWeather();
     e.target.blur();
-
-    icon.classList.remove("animate");
-    void icon.offsetWidth; // Trigger reflow
-    icon.classList.add("animate");
   }
 });
 
@@ -37,6 +33,9 @@ const getWeather = async () => {
       );
     }
     cityName.innerText = input.value;
+    icon.classList.remove("animate");
+    void icon.offsetWidth;
+    icon.classList.add("animate");
 
     if (info.main.temp >= 25) {
       icon.innerHTML = '<img src="./icons/hot-temperature.png" alt="hot icon">';
