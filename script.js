@@ -7,6 +7,7 @@ let pressure = document.getElementById("pressure");
 let input = document.getElementById("input");
 let cityName = document.getElementById("city-name");
 const update = document.getElementById("last-update");
+const title = document.getElementById("title");
 
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -32,6 +33,7 @@ const getWeather = async () => {
         (input.value = "")
       );
     }
+    title.remove();
     cityName.innerText = input.value;
     icon.classList.remove("animate");
     void icon.offsetWidth;
