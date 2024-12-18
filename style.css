@@ -147,3 +147,24 @@ body {
   font-size: 0.9rem;
   color: #888;
 }
+
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.footer span#author {
+  font-weight: bold;
+  color: red;
+}
+
+@media screen and (max-width: 720px) {
+  .footer {
+    font-size: 15px;
+  }
+}

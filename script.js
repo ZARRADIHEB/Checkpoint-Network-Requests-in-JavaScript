@@ -8,7 +8,7 @@ let input = document.getElementById("input");
 let cityName = document.getElementById("city-name");
 const update = document.getElementById("last-update");
 
-input.addEventListener("keypress", (e) => {
+input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     getWeather();
     e.target.blur();
@@ -82,3 +82,6 @@ const hours = date.getHours().toString().padStart(2, "0");
 const minutes = date.getMinutes().toString().padStart(2, "0");
 update.textContent = `  Last updated:
     ${hours}:${minutes}`;
+
+let year = document.getElementById("year");
+year.innerHTML = new Date().getFullYear();
